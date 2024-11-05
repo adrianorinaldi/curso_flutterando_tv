@@ -52,7 +52,7 @@ String password = "";
               RaisedButton(
                 onPressed: (){
                   if(email == "adriano" && password == "123") {
-                    Navigator.of(context).pushNamed("/home");
+                    Navigator.of(context).pushReplacementNamed("/home");
                   } else {
                     print("não");
                   }

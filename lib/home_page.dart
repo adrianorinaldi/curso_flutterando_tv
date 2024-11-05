@@ -18,7 +18,13 @@ class HomePageState extends State<HomePage> {
         title: Text("HomePage"),
         actions: [
           CustomSwitch(),
-          //ButtonBar()
+          IconButton(
+            icon: const Icon(Icons.logout),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed("/");
+            }
+          ),
         ],
       ),
       body: Container(
