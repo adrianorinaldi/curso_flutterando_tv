@@ -9,13 +9,11 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
 
-String email = "";
-String password = "";
+  String email = "";
+  String password = "";
 
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: SizedBox(
+  Widget _body() {
+    return SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Padding(
@@ -23,6 +21,14 @@ String password = "";
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                width: 150,
+                height: 150,
+                child: Image.asset('assets/images/logo.png')
+              ),
+              Container(
+                height: 20,
+              ),
               TextField(
                 onChanged: (text) {
                   email = text;
@@ -62,7 +68,20 @@ String password = "";
             ],
           ),
         ),
-      ),
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.red,
+          ),
+          _body(), 
+        ],
+      )  
     );
   }
 }

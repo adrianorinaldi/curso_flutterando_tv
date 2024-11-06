@@ -48,12 +48,12 @@ class HomePageState extends State<HomePage> {
         )
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.access_alarm),
         onPressed: (){
           setState(() {
             counter++;
           });
         },
-        child: Icon(Icons.access_alarm),
       ),
     );
   }
